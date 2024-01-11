@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/jlcarrascof/Webserver/issues"
   },
-  "homepage": "https://github.com/jlcarrascof/Webserver#readme"
+  "homepage": "https://github.com/jlcarrascof/Webserver#readme",
+  "dependencies": {
+    "nodemon": "^3.0.2"
+  }
 }
