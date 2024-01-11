@@ -10,8 +10,16 @@ http.createServer((req, res) => {
 
     // * Enviando HTML
 
+    // res.writeHead(200, {'Content-Type': 'text/html'});
+    // const html = fs.readFileSync('./index.html');
+    // res.end(html);
+
+    // * Enviando HTML con templates
+
     res.writeHead(200, {'Content-Type': 'text/html'});
-    const html = fs.readFileSync('./index.html');
+    let html = fs.readFileSync('./index.html', 'utf8');
+    const nombre = 'Luis';
+    html = html.replace('{nombre}', nombre);
     res.end(html);
-    
+
 }).listen(3001, "localhost");
